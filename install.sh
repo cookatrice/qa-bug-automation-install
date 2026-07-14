@@ -8,8 +8,9 @@
 # - GitHub Copilot: MCP 설정 시 IDE 선택 필요 (VSCode / IntelliJ)
 #
 # 사용법:
-#   로컬 실행: ./install.sh
-#   원격 설치: /bin/bash -c "$(curl -fsSL https://code.skplanet.com/projects/VRBT/repos/qa-bug-automation-install/raw/install.sh?at=refs%2Fheads%2Fmain)"
+#   1. 프로젝트 루트로 이동: cd ~/my-project
+#   2. 설치 실행: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/cookatrice/qa-bug-automation-install/refs/heads/main/install.sh)"
+#   3. AI 선택 후 설정 파일이 현재 디렉토리에 생성됩니다
 
 set -euo pipefail
 
@@ -22,11 +23,10 @@ BACKUP_DIR="$HOME/.qa-bug-automation-backup/$(date +%Y%m%d_%H%M%S)"
 MCP_LOCAL_URL="http://localhost:8080/sse"
 MCP_REMOTE_URL="http://10.202.201.25:8080/sse"
 
-# Repository 설정 (Bitbucket)
-REPO_BASE_URL="https://code.skplanet.com/projects/VRBT/repos/qa-bug-automation-install/raw"
-REPO_BRANCH="refs%2Fheads%2Fmain"
-BUG_INVESTIGATION_URL="${REPO_BASE_URL}/bug-investigation.mdc?at=${REPO_BRANCH}"
-CLAUDE_MD_URL="${REPO_BASE_URL}/CLAUDE.md?at=${REPO_BRANCH}"
+# Repository 설정 (GitHub)
+REPO_BASE_URL="https://raw.githubusercontent.com/cookatrice/qa-bug-automation-install/refs/heads/main"
+BUG_INVESTIGATION_URL="${REPO_BASE_URL}/bug-investigation.mdc"
+CLAUDE_MD_URL="${REPO_BASE_URL}/CLAUDE.md"
 
 # 색상
 RED='\033[0;31m'

@@ -7,7 +7,7 @@ Jira 버그 티켓을 AI가 자동으로 조사하도록 설정하는 설치 스
 QA Bug Automation을 사용할 **프로젝트 루트**로 이동한 후 아래 명령을 복사해서 붙여 넣으세요.
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://code.skplanet.com/projects/VRBT/repos/qa-bug-automation-install/raw/install.sh?at=refs%2Fheads%2Fmain)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/cookatrice/qa-bug-automation-install/refs/heads/main/install.sh)"
 ```
 
 ## 지원 AI
