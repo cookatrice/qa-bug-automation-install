@@ -168,7 +168,3 @@ npm run test / npm test / jest / pytest / yarn test / pnpm test
 사용 가능한 MCP 도구는 두 가지뿐입니다:
 - `investigate_bug` — 버그 조사 유일한 진입점
 - `confirm_jira_post` — Jira 코멘트 등록 전용
-
-## 참고
-
-- 프로젝트 전체 컨텍스트는 `harness/project.md`를 참고하세요.
